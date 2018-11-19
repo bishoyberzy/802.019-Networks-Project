@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <string>
+#include "Header.h"
 using namespace std;
 
 char Xor(char a, char b)
@@ -32,13 +33,13 @@ string binarydiv(string gx, string mx)
 	for (int i = 0; i < generatordegree; i++)
 		zeros += "0";
 
-	mx += zeros; //  message plus generator 
+	mx += zeros; //  message plus generator
 
 
 	while (l <= mx.length())		// stop when l reach end of msg
 	{
 		int j = 0;
-		
+
 		if (rim[j] == '1')
 		{
 			j++;
@@ -46,7 +47,7 @@ string binarydiv(string gx, string mx)
 			{
 				newrim += Xor(rim[j], gx[i]);
 				j++;
-				
+
 			}
 			if (l <= mx.length())
 			{
@@ -63,7 +64,7 @@ string binarydiv(string gx, string mx)
 			{
 				newrim += Xor(rim[j], zeros[i]);
 				j++;
-				
+
 			}
 			if (l <= mx.length())
 			{
@@ -77,15 +78,3 @@ string binarydiv(string gx, string mx)
 	return rim;
 }
 
-
-
-int main(void)
-{
-	cout << "Hello" << endl;
-	string zz1,zz2;
-	zz1 = binarydiv("10011", "11010111110010");
-	zz2 = binarydiv("1001", "10111101100");
-	cout << zz1 << endl;
-	cout << zz2 << endl;
-	system("pause");
-}
