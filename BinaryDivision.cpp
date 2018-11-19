@@ -30,7 +30,7 @@ string binarydiv(string gx, string mx)
 		rim += mx[l];
 
 	// adding zeros equall to generator degree gx to message mx
-	for (int i = 0; i < generatordegree; i++)
+	for (int i = 0; i < generatordegree-1; i++)
 		zeros += "0";
 
 	mx += zeros; //  message plus generator
