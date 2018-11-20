@@ -35,8 +35,8 @@ string binarydiv(string gx, string mx)
 		zeros += "0";
 	// adding zeros equall to generator degree gx to message mx
 	for (int i = 0; i < generatordegree-1; i++)
-		zeros1 += "0";
-	mx += zeros1; //  message plus generator degree
+		zerosadded += "0";
+	mx += zerosadded; //  message plus generator degree
 
 
 	while (l <= mx.length())		// stop when l reach end of msg
