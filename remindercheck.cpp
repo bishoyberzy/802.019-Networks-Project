@@ -4,8 +4,9 @@
 #include "Header.h"
 using namespace std;
 
-bool remindercheck(string s)
+bool verfier(string m, string generator)
 {
+	string s = binarydiv(generator, m)
 	for (int i = 0; i < s.length(); i++)
 	{
 		if (s[i] == '1')

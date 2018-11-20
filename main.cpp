@@ -13,5 +13,6 @@ int main()
     getline(cin,data);
     string transmitted_message = Generator(data,generator);
     cout << "Transmitted Message:\n" + transmitted_message <<endl;
+    
     return 0;
 }

@@ -4,5 +4,5 @@
 using namespace std;
 
 string binarydiv(string gx, string mx);
-bool remindercheck(string s);
+bool verfier(string s, string generator);
 string Generator (string data, string generator);
