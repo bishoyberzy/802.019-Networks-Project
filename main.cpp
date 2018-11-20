@@ -13,6 +13,7 @@ int main()
     getline(cin,data);
     string transmitted_message = Generator(data,generator);
     cout << "Transmitted Message:\n" + transmitted_message <<endl;
-    
+    cout << "verfier output" << verfier(transmitted_message, generator);
+
     return 0;
 }
