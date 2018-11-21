@@ -37,7 +37,6 @@ int main()
         string altered_message = alter(transmitted_message,index-1);
         myfile<< "altered message:\n" << altered_message<<endl;
         cout<< "altered message:\n" << altered_message<<endl;
-        cout<< "crc: "<< binarydiv(generator, altered_message);
         myfile << "verifier output:\n" << (verfier(altered_message, generator)?"Message is Correct!":"Message is not Correct!")<<endl;
         cout<< "verifier output:\n" << (verfier(altered_message, generator)?"Message is Correct!":"Message is not Correct!")<<endl;
 
