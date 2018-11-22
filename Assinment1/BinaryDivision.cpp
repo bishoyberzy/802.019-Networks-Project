@@ -24,7 +24,7 @@ string binarydiv(string gx, string mx)
 	generatordegree = gx.length();
 	int l;			//iterator for mx
 	string zeros;		//divisor in case bit equalls 0
-	
+
 
 							//parsing first rim from mx
 	for (l = 0; l < generatordegree; l++)
@@ -33,10 +33,10 @@ string binarydiv(string gx, string mx)
 	//zeros for xor
 	for (int i = 0; i < generatordegree; i++)
 		zeros += "0";
-	
 
 
-	while (l < mx.length())		// stop when l reach end of msg
+
+	while (l <= mx.length())		// stop when l reach end of msg
 	{
 		int j = 0;
 
@@ -49,11 +49,12 @@ string binarydiv(string gx, string mx)
 				j++;
 
 			}
-			if (l <= mx.length())
+			if (l < mx.length())
 			{
 				newrim += mx[l];
-				l++;
+				
 			}
+			l++;
 			rim = newrim;
 			newrim = "";
 		}
@@ -66,11 +67,12 @@ string binarydiv(string gx, string mx)
 				j++;
 
 			}
-			if (l <= mx.length())
+			if (l < mx.length())
 			{
 				newrim += mx[l];
-				l++;
+				
 			}
+			l++;
 			rim = newrim;
 			newrim = "";
 		}
@@ -79,9 +81,9 @@ string binarydiv(string gx, string mx)
 	if (rim.length() == gx.length())
 	{
 		for (int p = 1; p < gx.length(); p++)
-		rim3 += rim[p];
+			rim3 += rim[p];
+		return rim3;
 	}
-	return rim3;
+	return rim;
 }
-
 
