@@ -36,7 +36,7 @@ string binarydiv(string gx, string mx)
 	
 
 
-	while (l <= mx.length())		// stop when l reach end of msg
+	while (l < mx.length())		// stop when l reach end of msg
 	{
 		int j = 0;
 
@@ -75,7 +75,13 @@ string binarydiv(string gx, string mx)
 			newrim = "";
 		}
 	}
-	return rim;
+	string rim3;
+	if (rim.length() == 4)
+	{
+		for (int p = 1; p < 4; p++)
+		rim3 += rim[p];
+	}
+	return rim3;
 }
 
 
