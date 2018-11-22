@@ -76,9 +76,9 @@ string binarydiv(string gx, string mx)
 		}
 	}
 	string rim3;
-	if (rim.length() == 4)
+	if (rim.length() == gx.length())
 	{
-		for (int p = 1; p < 4; p++)
+		for (int p = 1; p < gx.length(); p++)
 		rim3 += rim[p];
 	}
 	return rim3;
